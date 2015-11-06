@@ -59,7 +59,7 @@ IE 支持通过特定的 <meta> 标签来确定绘制当前页面所应该采用
 </head>
 ```
 ###引入 CSS 和 JavaScript 文件
-####引入 CSS 和 JavaScript 文件时不需要指定 type 属性
+#####引入 CSS 和 JavaScript 文件时不需要指定 type 属性
 根据 HTML5 规范，在引入 CSS 和 JavaScript 文件时一般不需要指定 type 属性，因为 text/css 和 text/javascript 分别是它们的默认值。
 ```HTML
 <!-- External CSS -->
@@ -73,7 +73,7 @@ IE 支持通过特定的 <meta> 标签来确定绘制当前页面所应该采用
 <!-- JavaScript -->
 <script src="code-guide.js"></script>
 ```
-####引入文件的顺序
+#####引入文件的顺序
 <p>我们在引入第三方样式及公共样式和第三方javascript库文件(如：jquery)时，要注意引入文件的先后顺序，以确保在需要时自定义的样式能正确覆盖及javascript的正确执行。</p>
 <p>原则上在使用第三方插件时必避免直接修改第三方文件的代码结构，正确的做法是用自定义样式覆盖原有样式。下面的代码是Bootstarp基本模板</p>
 ```HTML
