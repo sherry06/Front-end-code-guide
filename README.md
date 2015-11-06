@@ -59,7 +59,7 @@ IE 支持通过特定的 <meta> 标签来确定绘制当前页面所应该采用
 </head>
 ```
 ###引入 CSS 和 JavaScript 文件
-* 引入 CSS 和 JavaScript 文件时不需要指定 type 属性
+####引入 CSS 和 JavaScript 文件时不需要指定 type 属性
 根据 HTML5 规范，在引入 CSS 和 JavaScript 文件时一般不需要指定 type 属性，因为 text/css 和 text/javascript 分别是它们的默认值。
 ```HTML
 <!-- External CSS -->
@@ -73,4 +73,38 @@ IE 支持通过特定的 <meta> 标签来确定绘制当前页面所应该采用
 <!-- JavaScript -->
 <script src="code-guide.js"></script>
 ```
-* 引入顺序
+####引入文件的顺序
+```HTML
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- 其它再引入自定义样式表文件 -->
+    <link rel="stylesheet" href="custom.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <h1>你好，世界！</h1>
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
+```
+上面的代码是Bootstarp基本模板，我们在引入第三方样式及公共样式和第三方javascript库文件(如：jquery)时，要注册引入的先后顺序，以确保在需要时自定义的样式能正确覆盖及javascript的正确执行。
+原则上在使用第三方插件时必避免直接修改第三方文件的代码结构，正确的做法是用自定义样式覆盖原有样式。
