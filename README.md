@@ -10,7 +10,7 @@
 * 对于属性的定义，确保全部使用双引号，绝不要使用单引号。
 * 不要在自闭合（self-closing）元素的尾部添加斜线 -- HTML5 规范中明确说明这是可选的。
 * 不要省略可选的结束标签（closing tag）（例如，\</li\> 或 \</body\>）。
-```Html
+```HTML
 <!DOCTYPE html>
 <html>
   <head>
@@ -22,4 +22,12 @@
   </body>
 </html>
 ```
-
+###HTML5 doctype声明
+为每个 HTML 页面的第一行添加标准模式（standard mode）的声明，这样能够确保在每个浏览器中拥有一致的展现。
+```HTML
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+</html>
+```
