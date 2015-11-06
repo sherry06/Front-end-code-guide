@@ -58,4 +58,19 @@ IE 支持通过特定的 <meta> 标签来确定绘制当前页面所应该采用
   <meta charset="UTF-8">
 </head>
 ```
+###引入 CSS 和 JavaScript 文件
+* 引入 CSS 和 JavaScript 文件时不需要指定 type 属性
+根据 HTML5 规范，在引入 CSS 和 JavaScript 文件时一般不需要指定 type 属性，因为 text/css 和 text/javascript 分别是它们的默认值。
+```HTML
+<!-- External CSS -->
+<link rel="stylesheet" href="code-guide.css">
 
+<!-- In-document CSS -->
+<style>
+  /* ... */
+</style>
+
+<!-- JavaScript -->
+<script src="code-guide.js"></script>
+```
+* 引入顺序
