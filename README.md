@@ -39,4 +39,23 @@
 更多关于 lang 属性的知识可以从 [此规范](http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-html-element) 中了解。
 
 这里列出了[语言代码表](http://reference.sitepoint.com/html/lang-codes)。
+```HTML
+<html lang="zh-CN">
+  <!-- ... -->
+</html>
+```
+###IE 兼容模式
+IE 支持通过特定的 <meta> 标签来确定绘制当前页面所应该采用的 IE 版本。除非有强烈的特殊需求，否则最好是设置为 edge mode，从而通知 IE 采用其所支持的最新的模式。
+
+阅读这篇 stack overflow 上的文章可以获得更多有用的信息。
+```HTML
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+```
+###字符编码
+通过明确声明字符编码，能够确保浏览器快速并容易的判断页面内容的渲染方式。这样做的好处是，可以避免在 HTML 中使用字符实体标记（character entity），从而全部与文档编码一致（一般采用 UTF-8 编码）。
+```HTML
+<head>
+  <meta charset="UTF-8">
+</head>
+```
 
