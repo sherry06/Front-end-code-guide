@@ -1,5 +1,3 @@
 #前端编码规范
-#45454545
-```Css
-.down{width:230px}
-```
+##说明
+此手册由六月网络研发中心基于"编码规范 by @mdo"(http://codeguide.bootcss.com/)基础而编制
